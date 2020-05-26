@@ -1,0 +1,113 @@
+--- 
+intents: 
+  - greet
+  - ilokano
+  - define_covid_ilokano
+  - cure_covid_ilokano
+  - list_covid_symptoms_ilokano
+  - curse
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - tagalog
+  - define_covid_tagalog
+  - cure_covid_tagalog
+  - list_covid_symptoms_tagalog
+  - thank
+responses: 
+  utter_greet: 
+    - 
+      text: "Kumusta, sana nasa mabuting kalagayan ka. Pumili ng linguwahe:"    
+      buttons: 
+        - 
+          payload: /ilokano
+          title: Ilokano
+        - 
+          payload: /tagalog
+          title: Tagalog
+
+# Ilokano Part
+  utter_greet_ilokano: 
+    - 
+      text: "Naimbag nga aldaw mu, gayyem! Anya kayat mu maamwan?"
+      buttons: 
+        - 
+          payload: /define_covid_ilokano
+          title: "Anya aya ti kovid?"
+      
+  utter_define_covid_ilokano: 
+    - 
+      text: "Iti Covid wennu COVID-19 nga kuna da ket maysa nga nakaru nga sakit nga ited ti virus nga corona."
+      buttons: 
+        - 
+          payload: /cure_covid_ilokano
+          title: "Agas wennu bakuna"
+        - 
+          payload: /list_covid_symptoms_ilokano
+          title: "Ana agiti sintomas"      
+  
+  utter_cure_covid_ilokano: 
+    - 
+      text: "Iti agdama awan pay iti bakuna ken agas para iti Covid."
+ 
+  utter_list_covid_symptoms_ilokano: 
+    - 
+      text: |-
+          Dagiti sintomas atuy nga sakit ket : 
+          1. Nakaru nga panag-gurgurigur. 
+          2. Namaga nga uyek. 
+          3. Marigatan nga umanges. 
+          4. Marigatan gumaraw. 
+          5. Nasakit ti bagbagi.
+          
+# Tagalog Part
+  utter_greet_tagalog: 
+    - 
+      text: "Magandang araw, kaibigan! Anong gusto mong malaman?"
+      buttons: 
+        - 
+          payload: /define_covid_tagalog
+          title: "Ano ang COVID?"
+      
+  utter_define_covid_tagalog: 
+    - 
+      text: "Ang COVID o COVID-19 ay isang malubha at mapanghawang sakit na dulot ng corona virus."
+      buttons: 
+        - 
+          payload: /cure_covid_tagalog
+          title: "Gamot"
+        - 
+          payload: /list_covid_symptoms_tagalog
+          title: "Sintomas"      
+  
+  utter_cure_covid_tagalog: 
+    - 
+      text: "Sa kasalukuyan wala pang natutuklasan o mabisang gamot at bakunat para sa COVID."
+ 
+  utter_list_covid_symptoms_tagalog: 
+    - 
+      text: |-
+          Ang mga sintomas na dulot ng COVID ay ang mga sumusunod : 
+          1. Malubhang lagnat. 
+          2. Magang pag-uubo. 
+          3. Nahihirapang huminga. 
+          4. Nahihirapan gumalaw. 
+          5. Masakit ang katawan.          
+  
+  utter_goodbye: 
+    - 
+      text: "Salamat sa pagbisita. Mag-ingat lagi at wag kalimutan maghugas ng kamay!"
+      
+  utter_sorry_for_curse: 
+    - 
+      text: "Please wag magmura. Bad yan. :("
+      
+  utter_your_welcome: 
+    - 
+      text: "Walang anuman! :)"
+session_config: 
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60

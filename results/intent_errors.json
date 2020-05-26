@@ -1,0 +1,10 @@
+[
+  {
+    "text": "anya sintomas?",
+    "intent": "list_covid_symptoms_ilokano",
+    "intent_prediction": {
+      "name": "list_covid_symptoms_tagalog",
+      "confidence": 0.6928093433380127
+    }
+  }
+]
