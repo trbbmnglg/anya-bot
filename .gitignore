@@ -1,2 +1,7 @@
 #Don't include
 credentials.yml
+results/*
+models/*
+endpoints.yml
+events.*
+rasa.db

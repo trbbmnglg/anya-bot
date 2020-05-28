@@ -1,113 +1,117 @@
---- 
-intents: 
-  - greet
-  - ilokano
-  - define_covid_ilokano
-  - cure_covid_ilokano
-  - list_covid_symptoms_ilokano
-  - curse
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - tagalog
-  - define_covid_tagalog
-  - cure_covid_tagalog
-  - list_covid_symptoms_tagalog
-  - thank
-responses: 
-  utter_greet: 
-    - 
-      text: "Kumusta, sana nasa mabuting kalagayan ka. Pumili ng linguwahe:"    
-      buttons: 
-        - 
-          payload: /ilokano
-          title: Ilokano
-        - 
-          payload: /tagalog
-          title: Tagalog
-
-# Ilokano Part
-  utter_greet_ilokano: 
-    - 
-      text: "Naimbag nga aldaw mu, gayyem! Anya kayat mu maamwan?"
-      buttons: 
-        - 
-          payload: /define_covid_ilokano
-          title: "Anya aya ti kovid?"
-      
-  utter_define_covid_ilokano: 
-    - 
-      text: "Iti Covid wennu COVID-19 nga kuna da ket maysa nga nakaru nga sakit nga ited ti virus nga corona."
-      buttons: 
-        - 
-          payload: /cure_covid_ilokano
-          title: "Agas wennu bakuna"
-        - 
-          payload: /list_covid_symptoms_ilokano
-          title: "Ana agiti sintomas"      
-  
-  utter_cure_covid_ilokano: 
-    - 
-      text: "Iti agdama awan pay iti bakuna ken agas para iti Covid."
- 
-  utter_list_covid_symptoms_ilokano: 
-    - 
-      text: |-
-          Dagiti sintomas atuy nga sakit ket : 
-          1. Nakaru nga panag-gurgurigur. 
-          2. Namaga nga uyek. 
-          3. Marigatan nga umanges. 
-          4. Marigatan gumaraw. 
-          5. Nasakit ti bagbagi.
-          
-# Tagalog Part
-  utter_greet_tagalog: 
-    - 
-      text: "Magandang araw, kaibigan! Anong gusto mong malaman?"
-      buttons: 
-        - 
-          payload: /define_covid_tagalog
-          title: "Ano ang COVID?"
-      
-  utter_define_covid_tagalog: 
-    - 
-      text: "Ang COVID o COVID-19 ay isang malubha at mapanghawang sakit na dulot ng corona virus."
-      buttons: 
-        - 
-          payload: /cure_covid_tagalog
-          title: "Gamot"
-        - 
-          payload: /list_covid_symptoms_tagalog
-          title: "Sintomas"      
-  
-  utter_cure_covid_tagalog: 
-    - 
-      text: "Sa kasalukuyan wala pang natutuklasan o mabisang gamot at bakunat para sa COVID."
- 
-  utter_list_covid_symptoms_tagalog: 
-    - 
-      text: |-
-          Ang mga sintomas na dulot ng COVID ay ang mga sumusunod : 
-          1. Malubhang lagnat. 
-          2. Magang pag-uubo. 
-          3. Nahihirapang huminga. 
-          4. Nahihirapan gumalaw. 
-          5. Masakit ang katawan.          
-  
-  utter_goodbye: 
-    - 
-      text: "Salamat sa pagbisita. Mag-ingat lagi at wag kalimutan maghugas ng kamay!"
-      
-  utter_sorry_for_curse: 
-    - 
-      text: "Please wag magmura. Bad yan. :("
-      
-  utter_your_welcome: 
-    - 
-      text: "Walang anuman! :)"
-session_config: 
-  carry_over_slots_to_new_session: true
+session_config:
   session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- show_tag
+- define_covid_tag
+- prevent_covid_tag
+- cure_covid_tag
+- list_covid_symptoms_tag
+- respond_has_symptoms_none_tag
+- respond_has_symptoms_all_tag
+- respond_has_symptoms_some_tag
+- covid_origin_tag
+- corona_image
+- thank
+- bot
+- affirm
+- goodbye
+- laugh
+- curse
+entities:
+- medicine_names
+- curse_words
+- covid_names
+- origin_names
+- prevent_names
+- image_names
+- symptoms_names
+responses:
+  utter_greet:
+  - buttons:
+    - payload: /show_tag
+      title: Tagalog
+    text: 'Kumusta! Sana nasa mabuting kalagayan ka. Pumili ng linguwahe:'
+  utter_learn_tag:
+  - buttons:
+    - payload: /define_covid_tag
+      title: Ano ang COVID-19?
+    - payload: /prevent_covid_tag
+      title: Iwasan ang COVID-19
+    - payload: /list_covid_symptoms_tag
+      title: Sintomas ng COVID-19
+    text: Anong nais mong malaman?
+  utter_prevent_covid_tag:
+  - text: "Maiiwasan ang kontaminasyon kung :\n- Manatiling nasa bahay.\n- Laging\
+      \ maghugas ng kamay gamit ang sabon sa loob ng 20 segundo sa dumadaloy na tubig.\n\
+      - Laging magdisinfect sa loob ng bahay lalo na ang mga laging nahahawakang gamit.\n\
+      - Gumamit ng sanitizer na may 70% alcohol o higit bilang alternatibo sa paghuhugas\
+      \ ng kamay.\n- Gumamit ng face mask o cloth mask kung kailangang lumabas.\n\
+      - Iwasang hawakan ang mata, ilong at bibig.\n- Sundin ang utos ng lokal na pamahalan\
+      \ patungkol sa mga ordinansa para makaiwas"
+  utter_define_covid_tag:
+  - text: Ang COVID o COVID-19 (COrona VIrus Disease) ay isang malubha at mapanghawang
+      sakit na dulot ng bagong nadiskubreng coronavirus.
+  utter_cure_covid_tag:
+  - text: Sa kasalukuyan wala pang natutuklasan o mabisang gamot at bakunat para sa
+      COVID.
+  utter_list_covid_symptoms_tag:
+  - text: "Ang mga sintomas na dulot ng coronavirus ay ang mga sumusunod :\n- Malubhang\
+      \ lagnat.\n- Tuyong ubo.\n- Masakit ang katawan.\n- Nahihirapan sa paghinga.\n\
+      - Sakit sa dibdib.\n- Nahihirapan sa pagsalita at paggalaw."
+  utter_ask_has_covid_symptoms_tag:
+  - buttons:
+    - payload: /respond_has_symptoms_none_tag
+      title: Walang sintomas
+    - payload: /respond_has_symptoms_all_tag
+      title: Lahat ng sintomas
+    - payload: /respond_has_symptoms_some_tag
+      title: Ilan sa sintomas
+    text: May nararamdaman ka ba sa mga nabanggit na sintomas?
+  utter_feel_covid_symptoms_none_tag:
+  - text: Mabuti naman kung ganun.
+  utter_feel_covid_symptoms_all_tag:
+  - text: "Tumawag sa mga sumusunod na DOH COVID-19 emergency hotlines kung sa tining\
+      \ mo ikaw ay infected, meron ka lahat ng sintomas, o naexpose ka isang confirmed\
+      \ case:\n- 02-894-COVID (02-894-26843)\n- 1555 (PLDT/TNT/SMART/SUN)"
+  utter_feel_covid_symptoms_some_tag:
+  - text: Kailangan mong magphinga sa inyong bahay at uminom ng maraming tubig.
+  utter_goodbye:
+  - text: Salamat sa pagbisita. Mag-ingat lagi at wag kalimutan maghugas ng kamay!
+      Paalam!
+  utter_show_corona_image:
+  - image: https://thepathologist.com/fileadmin/_processed_/e/8/csm_0320-900_Supp_COVID19_1_In_Article_f7dbbbe8e0.jpg
+    text: Ito ang itsura ng corona-virus sa microscope.
+  utter_covid_origin_tag:
+  - text: Ang unang kaso ng coronavirus ay naitala sa Wuhan, China noong December
+      31, 2019.
+  utter_sorry_for_curse:
+  - text: Please wag magmura. Bad yan. :(
+  utter_your_welcome:
+  - text: Walang anuman! :)
+  utter_affirm:
+  - text: Yeah! :)
+  utter_laugh:
+  - text: 😁😁
+  utter_default:
+  - text: Pasensya, hindi  ko maintindihan ang iyong sinasabi. 😢
+actions:
+- utter_greet
+- utter_learn_tag
+- utter_prevent_covid_tag
+- utter_define_covid_tag
+- utter_cure_covid_tag
+- utter_list_covid_symptoms_tag
+- utter_feel_covid_symptoms_none_tag
+- utter_feel_covid_symptoms_all_tag
+- utter_feel_covid_symptoms_some_tag
+- utter_show_corona_image
+- utter_covid_origin_tag
+- utter_goodbye
+- utter_sorry_for_curse
+- utter_your_welcome
+- utter_affirm
+- utter_default
+- utter_ask_has_covid_symptoms_tag
+- utter_laugh
