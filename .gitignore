@@ -2,6 +2,10 @@
 credentials.yml
 results/*
 models/*
-endpoints.yml
+tests/*
 events.*
 rasa.db
+endpoints.yml
+chromedriver.exe
+graph.html
+ngrok.exe

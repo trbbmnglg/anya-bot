@@ -1,0 +1,4 @@
+bilang
+sum
+ilan
+lahat

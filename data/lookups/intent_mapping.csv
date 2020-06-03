@@ -1,0 +1,12 @@
+define_covid_tag,nagtatanong ka kung ano ang covid.
+prevent_covid_tag,nagtatanong ka kung paano iwasan ang covid.
+cure_covid_tag,nagtatanong ka kung anong gamot sa covid.
+list_covid_symptoms_tag,nagtatanong ka kung anong mga sintomas ng covid.
+respond_has_symptoms_some_tag,ay nagsasabi ka na may sintomas ka.
+covid_origin_tag,nagtatanong ka kung saan nagmula ang covid.
+corona_image,nagtatanong ka kung ano ang itsura ng coronavirus.
+show_covid_count_of_cases_tag,nagtatanong ka kung ilan ang lahat ng kaso.
+covid_update, hinihingi mo ang updates ng covid.
+thank,nagpapasalamat ka.
+laugh,masaya ka.
+curse,nagmumura. Wag naman sana :(
